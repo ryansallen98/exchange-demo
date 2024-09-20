@@ -36,6 +36,7 @@ function CurrencySelect({ currencies, value, onChange }) {
       <Select
         value={value}
         onChange={onChange}
+        sx={{ borderRadius: '12px' }}
       >
         {currencies.map((currency, index) => (
           <MenuItem key={index} value={currency.value}>
@@ -278,12 +279,12 @@ export default function App() {
               <Stack gap={1}>
                 <CurrencyToggle value={type1} onChange={handleType1} />
                 <CurrencySelect currencies={currencies[type1]} value={currency1} onChange={handleCurrency1} />
-                <TextField size="small" placeholder="Buy Amount" type="number" value={amount1} onChange={handleAmount1} />
+                <TextField size="small" placeholder="Buy Amount" type="number" value={amount1} onChange={handleAmount1} sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }} />
               </Stack>
               <Stack gap={1}>
                 <CurrencyToggle value={type2} onChange={handleType2} />
                 <CurrencySelect currencies={currencies[type2]} value={currency2} onChange={handleCurrency2} />
-                <TextField size="small" placeholder="Sell Amount" type="number" value={amount2} onChange={handleAmount2} />
+                <TextField size="small" placeholder="Sell Amount" type="number" value={amount2} onChange={handleAmount2} sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }} />
               </Stack>
             </Stack>
             <Stack width={'100%'} justifyContent={'center'} alignItems={'center'}>
@@ -308,7 +309,7 @@ export default function App() {
           </Stack>
           <Typography variant={'body2'} color="#A0AEC0">Request a {exchangeType} {exchangeType === "sell" ? `of ${amount1} ${currency1}` : `for ${amount2} ${currency2}`}</Typography>
           <Box>
-            <Button variant={'contained'} onClick={toggleModal}>Request Exchange</Button>
+            <Button fullWidth variant={'contained'} onClick={toggleModal} sx={{ borderRadius: '12px' }}>Request Exchange</Button>
             <Dialog open={modalOpen} onClose={toggleModal}>
               <Stack p={3} gap={2}>
                 <Typography variant={'h5'}>Exchange Request</Typography>
