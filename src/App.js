@@ -309,7 +309,7 @@ export default function App() {
           </Stack>
           <Typography variant={'body2'} color="#A0AEC0">Request a {exchangeType} {exchangeType === "sell" ? `of ${amount1} ${currency1}` : `for ${amount2} ${currency2}`}</Typography>
           <Box>
-            <Button fullWidth variant={'contained'} onClick={toggleModal} sx={{ borderRadius: '12px' }}>Request Exchange</Button>
+            <Button variant={'contained'} onClick={toggleModal} sx={{ borderRadius: '12px' }}>Request Exchange</Button>
             <Dialog open={modalOpen} onClose={toggleModal}>
               <Stack p={3} gap={2}>
                 <Typography variant={'h5'}>Exchange Request</Typography>
