@@ -96,6 +96,7 @@ const exchangeRates = {
       ETH: 15,
       'USDT ERC20': 26000,
       'USDT TRC20': 26000,
+      USD: 1,
     },
     GBP: {
       USD: 1.31,
@@ -104,6 +105,7 @@ const exchangeRates = {
       ETH: 15,
       'USDT ERC20': 26000,
       'USDT TRC20': 26000,
+      GBP: 1,
     },
     EUR: {
       USD: 1.18,
@@ -112,6 +114,7 @@ const exchangeRates = {
       ETH: 15,
       'USDT ERC20': 26000,
       'USDT TRC20': 26000,
+      EUR: 1,
     },
   },
   crypto: {
@@ -122,6 +125,7 @@ const exchangeRates = {
       ETH: 15,
       'USDT ERC20': 26000,
       'USDT TRC20': 26000,
+      BTC: 1,
     },
     ETH: {
       USD: 1800,
@@ -130,6 +134,7 @@ const exchangeRates = {
       BTC: 0.067,
       'USDT ERC20': 26000,
       'USDT TRC20': 26000,
+      ETH: 1,
     },
     'USDT ERC20': {
       USD: 1,
@@ -137,6 +142,8 @@ const exchangeRates = {
       EUR: 0.85,
       BTC: 0.000038,
       ETH: 0.00056,
+      'USDT TRC20': 1,
+      'USDT ERC20': 1,
     },
     'USDT TRC20': {
       USD: 1,
@@ -144,6 +151,8 @@ const exchangeRates = {
       EUR: 0.85,
       BTC: 0.000038,
       ETH: 0.00056,
+      'USDT ERC20': 1,
+      'USDT TRC20': 1,
     },
   }
 };
@@ -175,7 +184,7 @@ export default function App() {
     setModalOpen(!modalOpen);
   }
 
-  const fx = 0.983737;
+  const fx = exchangeRates[type2][currency2][currency1];
 
   const handleAmount1 = (e) => {
     const value = e.target.value;
