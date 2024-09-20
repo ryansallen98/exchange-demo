@@ -63,14 +63,6 @@ const currencies = {
     {
       name: 'EUR',
       value: 'EUR',
-    },
-    {
-      name: 'AUD',
-      value: 'AUD',
-    },
-    {
-      name: 'NZD',
-      value: 'NZD',
     }
   ],
   crypto: [
@@ -91,11 +83,7 @@ const currencies = {
       name: 'USDT',
       type: 'TRC20',
       value: 'USDT TRC20',
-    },
-    {
-      name: 'USDC',
-      value: 'USDC',
-    },
+    }
   ]
 }
 
@@ -104,32 +92,26 @@ const exchangeRates = {
     USD: {
       GBP: 0.76,
       EUR: 0.85,
-      AUD: 1.40,
-      NZD: 1.50,
+      BTC: 0.067,
+      ETH: 15,
+      'USDT ERC20': 26000,
+      'USDT TRC20': 26000,
     },
     GBP: {
       USD: 1.31,
       EUR: 1.12,
-      AUD: 1.84,
-      NZD: 1.97,
+      BTC: 0.067,
+      ETH: 15,
+      'USDT ERC20': 26000,
+      'USDT TRC20': 26000,
     },
     EUR: {
       USD: 1.18,
       GBP: 0.89,
-      AUD: 1.63,
-      NZD: 1.75,
-    },
-    AUD: {
-      USD: 0.71,
-      GBP: 0.54,
-      EUR: 0.61,
-      NZD: 1.08,
-    },
-    NZD: {
-      USD: 0.67,
-      GBP: 0.51,
-      EUR: 0.57,
-      AUD: 0.93,
+      BTC: 0.067,
+      ETH: 15,
+      'USDT ERC20': 26000,
+      'USDT TRC20': 26000,
     },
   },
   crypto: {
@@ -138,14 +120,16 @@ const exchangeRates = {
       GBP: 19800,
       EUR: 22000,
       ETH: 15,
-      USDT: 26000,
+      'USDT ERC20': 26000,
+      'USDT TRC20': 26000,
     },
     ETH: {
       USD: 1800,
       GBP: 1370,
       EUR: 1540,
       BTC: 0.067,
-      USDT: 1800,
+      'USDT ERC20': 26000,
+      'USDT TRC20': 26000,
     },
     'USDT ERC20': {
       USD: 1,
@@ -155,13 +139,6 @@ const exchangeRates = {
       ETH: 0.00056,
     },
     'USDT TRC20': {
-      USD: 1,
-      GBP: 0.76,
-      EUR: 0.85,
-      BTC: 0.000038,
-      ETH: 0.00056,
-    },
-    USDC: {
       USD: 1,
       GBP: 0.76,
       EUR: 0.85,
