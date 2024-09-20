@@ -186,6 +186,32 @@ export default function App() {
 
   const fx = exchangeRates[type2][currency2][currency1];
 
+  const handleType1 = (e) => {
+    setType1(e.target.value);
+    setCurrency1(currencies[e.target.value][0].name);
+    handleAmount1({ target: { value: 0 } });
+    handleAmount2({ target: { value: 0 } });
+  }
+
+  const handleType2 = (e, newValue) => {
+    setType2(e.target.value);
+    setCurrency2(currencies[e.target.value][1].name);
+    handleAmount1({ target: { value: 0 } });
+    handleAmount2({ target: { value: 0 } });
+  }
+
+  const handleCurrency1 = (e) => {
+    setCurrency1(e.target.value);
+    handleAmount1({ target: { value: 0 } });
+    handleAmount2({ target: { value: 0 } });
+  }
+
+  const handleCurrency2 = (e) => {
+    setCurrency2(e.target.value);
+    handleAmount1({ target: { value: 0 } });
+    handleAmount2({ target: { value: 0 } });
+  }
+
   const handleAmount1 = (e) => {
     const value = e.target.value;
     setAmount1(value);
@@ -202,24 +228,6 @@ export default function App() {
       setAmount1(value / fx)
     }
     setExchangeType('buy');
-  }
-
-  const handleType1 = (e) => {
-    setType1(e.target.value);
-    setCurrency1(currencies[e.target.value][0].name);
-  }
-
-  const handleType2 = (e, newValue) => {
-    setType2(e.target.value);
-    setCurrency2(currencies[e.target.value][1].name);
-  }
-
-  const handleCurrency1 = (e) => {
-    setCurrency1(e.target.value);
-  }
-
-  const handleCurrency2 = (e) => {
-    setCurrency2(e.target.value);
   }
 
   const handleSwap = () => {
