@@ -171,8 +171,8 @@ export default function App() {
   });
 
 
-  const [amount1, setAmount1] = useState(0);
-  const [amount2, setAmount2] = useState(0);
+  const [amount1, setAmount1] = useState('');
+  const [amount2, setAmount2] = useState('');
   const [type1, setType1] = useState('fiat');
   const [type2, setType2] = useState('fiat');
   const [currency1, setCurrency1] = useState('USD');
@@ -278,12 +278,12 @@ export default function App() {
               <Stack gap={1}>
                 <CurrencyToggle value={type1} onChange={handleType1} />
                 <CurrencySelect currencies={currencies[type1]} value={currency1} onChange={handleCurrency1} />
-                <TextField size="small" placeholder="Amount" type="number" value={amount1} onChange={handleAmount1} />
+                <TextField size="small" placeholder="Buy Amount" type="number" value={amount1} onChange={handleAmount1} />
               </Stack>
               <Stack gap={1}>
                 <CurrencyToggle value={type2} onChange={handleType2} />
                 <CurrencySelect currencies={currencies[type2]} value={currency2} onChange={handleCurrency2} />
-                <TextField size="small" placeholder="Amount" type="number" value={amount2} onChange={handleAmount2} />
+                <TextField size="small" placeholder="Sell Amount" type="number" value={amount2} onChange={handleAmount2} />
               </Stack>
             </Stack>
             <Stack width={'100%'} justifyContent={'center'} alignItems={'center'}>
